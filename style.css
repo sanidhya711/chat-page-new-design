@@ -1,3 +1,6 @@
+*{
+    user-select: none;
+}
 body{
     height: 100vh;
     color: #EAEAEA;
@@ -16,15 +19,20 @@ body{
 .left-navbar .fa{
     color: #333;
     padding: 17px 0px;
-    transition: all 0.3s;
+    transition: color 0.3s;
 }
 .fa-cog{
     position: absolute;
-    bottom: 10px;
+    bottom: 70px;
 }
 .fa-user-circle-o{
     position: absolute;
-    bottom: 70px;
+    bottom: 130px;
+}
+.fa-sign-out{
+    position: absolute;
+    bottom: 10px;
+    transform: rotate(180deg);
 }
 .left-navbar .fa:hover{
     color: #5cb85c;
@@ -60,17 +68,20 @@ body{
 .input-bar-holder{
     position: fixed;
     bottom: 0px;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 17px;
+    padding: 13px 0px;
     align-self: center;
+    align-self: start;
+}
+.input-bar-holder input{
+    position: relative;
+    left: 29px;
 }
 input{
     border-radius: 27px;
-    width: 22rem;
-    width: 70%;
+    width: 75%;
     padding: 10px 13px 12px 47px;
     border: none;
     background-color: rgb(202, 202, 202);
@@ -80,18 +91,18 @@ input{
 }
 input:focus{
     outline: none;
-    width: calc(70% + 35px);
+    width: calc(75% + 50px);
     caret-color: #333;
 }
 ::placeholder{
     color: #333;
 }
 .user{
-    padding: 12px 12px;
+    padding: 16px 12px;
     width: 100%;
     display: flex;
     align-items: center;
-    transition: all 0.7s;
+    transition: background-color 0.7s;
 }
 .user:hover{
     background-color: #333;
@@ -103,19 +114,21 @@ input:focus{
     margin-right: 20px;
 }
 .fa-plus{
+    z-index: 1;
     color: #333;
     position: relative;
-    left: 32px;
-    transition: all 0.3s;
+    left: 59px;
+    top: 1px;
+    transition: color 0.3s;
 }
 .fa-plus:hover{
     color: #5cb85c;
 }
 .fa-smile-o{
     color: #333;
-    right: 95px;
+    right: 62px;
     position: relative;
-    transition: all 0.3s;
+    transition: color 0.3s;
 }
 .fa-smile-o:hover{
     color: #5cb85c;
@@ -126,13 +139,13 @@ input:focus{
 }
 .send-holder{
     color: #333;
-    right: 80px;
+    right: 51px;
     position: relative;
     background-color: #5cb85c;
     padding: 5px 18px;
     border-radius: 20px;
-    border-radius: 4px 20px 20px 4px;
-    transition: all 0.3s;
+    border-radius: 3px 20px 20px 3px;
+    transition: color 0.3s;
 }
 .send-holder:hover{
     color: #EAEAEA;
@@ -147,10 +160,11 @@ input:focus{
     overflow-y: auto;
 }
 .message{
-    padding: 15px;
+    padding: 16px;
     max-width: fit-content;
     border-radius: 5px;
     margin: 10.5px 0px;
+    user-select: auto;
 }
 .message:last-of-type{
     margin-bottom: 100px;
@@ -188,15 +202,15 @@ input:focus{
 }
 .users-swipe-left{
     animation-name: users-swipe-left-animation;
-    animation-duration: 0.5s;
+    animation-duration: 0.7s;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
+    animation-timing-function: ccubic-bezier(.98,.26,.81,.82);
 }
 .users-swipe-right{
     animation-name: users-swipe-right-animation;
-    animation-duration: 0.5s;
+    animation-duration: 0.7s;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
+    animation-timing-function: cubic-bezier(.98,.26,.81,.82);
 }
 @keyframes users-swipe-left-animation{
     from{left:-100%;}
@@ -207,6 +221,9 @@ input:focus{
     to{left: -100%;}
 }
 @media only screen and (max-width: 1200px){
+    input{
+        width: 100%;
+    }
     .main{
         width: 100%;
         position: absolute;

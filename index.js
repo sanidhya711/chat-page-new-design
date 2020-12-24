@@ -1,10 +1,10 @@
 var element = document.querySelector(".main");
 var input_holder = document.querySelector(".input-bar-holder");
-var width = element.offsetWidth;
+var width = element.offsetWidth-10;
 input_holder.style.width=width+"px";
 
 window.addEventListener("resize",function(){
-    width = element.offsetWidth;
+    width = element.offsetWidth-10;
     input_holder.style.width=width+"px";
 });
 
