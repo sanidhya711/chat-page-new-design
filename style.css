@@ -115,7 +115,7 @@ input:focus{
 }
 .fa-smile-o{
     color: #333;
-    right: 90px;
+    right: 95px;
     position: relative;
     transition: all 0.3s;
 }
@@ -124,7 +124,7 @@ input:focus{
 }
 .fa-paper-plane{
     position: relative;
-    right: 1px;
+    right: 3.5px;
 }
 .send-holder{
     color: #333;
@@ -133,6 +133,7 @@ input:focus{
     background-color: #5cb85c;
     padding: 5px 18px;
     border-radius: 20px;
+    border-radius: 4px 20px 20px 4px;
     transition: all 0.3s;
 }
 .send-holder:hover{
