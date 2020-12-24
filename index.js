@@ -11,13 +11,20 @@ document.querySelector("body").addEventListener('touchend',function(event){
     handleGesture();
 },false); 
 
+var users = document.querySelector(".users");
+
 function handleGesture() {
     if (touchendX+50 <= touchstartX) {
         console.log('Swiped left');
         message.innerText = "swipe left"
+        users.classList.remove("users-swipe-left");
+        users.classList.add("users-swipe-right");
     }
     if (touchendX >= touchstartX+50) {
         console.log('Swiped right');
         message.innerText = "swipe right"
+        users.classList.remove("users-swipe-right");
+        users.classList.add("users-swipe-left");
     }
 }
+   

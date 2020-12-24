@@ -5,6 +5,7 @@ body{
     height: 100vh;
     color: #EAEAEA;
     display: flex;
+    overflow: hidden;
 }
 .left-navbar{
     width: 3.5%;
@@ -67,6 +68,7 @@ body{
     justify-content: center;
     align-items: center;
     margin-bottom: 17px;
+    align-self: center;
 }
 input{
     border-radius: 27px;
@@ -188,8 +190,38 @@ input:focus{
 .search-user:focus{
     width: calc(85% + 20px);
 }
-/* @media only screen and (max-width: 1200px) {
-    .user h4{
-        display: none;
+.users-swipe-left{
+    animation-name: users-swipe-left-animation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+.users-swipe-right{
+    animation-name: users-swipe-right-animation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+@keyframes users-swipe-left-animation{
+    from{left:-100%;}
+    to{left: 0%;}
+}
+@keyframes users-swipe-right-animation{
+    from{left:0%;}
+    to{left: -100%;}
+}
+@media only screen and (max-width: 1200px) {
+    .main{
+        width: 100%;
+        position: absolute;
     }
-} */
+    .input-bar-holder{
+        width: 100%;
+    }
+    .users{
+        position: absolute;
+        left: -100%;
+        width: 100%;
+        z-index: 100;
+    }
+}
