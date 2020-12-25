@@ -21,15 +21,24 @@ document.querySelector("body").addEventListener('touchend',function(event){
 },false); 
 
 var users = document.querySelector(".users");
+var isAnimationRuuning = false;
 
 function handleGesture() {
-    if (touchendX+65 <= touchstartX) {
+    if (touchendX+65 <= touchstartX && !isAnimationRuuning){
+        isAnimationRuuning = true;
         users.classList.remove("users-swipe-left");
         users.classList.add("users-swipe-right");
+        setTimeout(() => {
+            isAnimationRuuning=false;
+        },700);
     }
-    if (touchendX >= touchstartX+65) {
+    if (touchendX >= touchstartX+65 && !isAnimationRuuning){
+        isAnimationRuuning = true;
         users.classList.remove("users-swipe-right");
         users.classList.add("users-swipe-left");
+        setTimeout(() => {
+            isAnimationRuuning=false;
+        },700);
     }
 }
    

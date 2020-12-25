@@ -5,6 +5,7 @@ body{
     height: 100vh;
     color: #EAEAEA;
     display: flex;
+    /* overflow: hidden; */
 }
 .left-navbar{
     width: 3.5%;
@@ -234,4 +235,40 @@ input:focus{
         width: 100%;
         z-index: 1;
     }
+}
+video{
+    width: 100%;
+    border-radius: 5px;
+}
+video:focus{
+    outline: none;
+}
+img{
+    width: 100%;
+    border-radius: 5px;
+}
+video:fullscreen{
+    border: none;
+}
+.video{
+    padding: 27px;
+    max-width: fit-content;
+    align-self: center;
+    width: 60%;
+    min-width: 375px;
+    max-width: 580px;
+}
+.image{
+    padding: 27px;
+    max-width: fit-content;
+    align-self: center;
+    width: 60%;
+    min-width: 375px;
+    max-width: 580px;
+}
+.media-from-self{
+    border: 3px solid #5cb85c;
+}
+.media-from-other-user{
+    border: 3px solid #d9534f;
 }
