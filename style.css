@@ -5,7 +5,6 @@ body{
     height: 100vh;
     color: #EAEAEA;
     display: flex;
-    overflow: hidden;
 }
 .left-navbar{
     width: 3.5%;
@@ -230,6 +229,7 @@ input:focus{
     .main{
         width: 100%;
         position: absolute;
+        height: 100%;
     }
     .users{
         position: absolute;

@@ -43,7 +43,7 @@ function handleGesture() {
 }
 
 var doodleHolder = document.querySelector(".messages");
-var noOfDoodles = 5;
+var noOfDoodles = 6;
 var randomDoodle = Math.floor(Math.random() * noOfDoodles)+1;
-doodleHolder.style.backgroundImage = "url(/doodles/doodle"+randomDoodle+".jpg)";
+doodleHolder.style.backgroundImage = "url(/chat-page-new-design/doodles/doodle"+randomDoodle+".jpg)";
 
