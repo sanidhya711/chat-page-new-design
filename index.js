@@ -41,4 +41,9 @@ function handleGesture() {
         },700);
     }
 }
-   
+
+var doodleHolder = document.querySelector(".messages");
+var noOfDoodles = 5;
+var randomDoodle = Math.floor(Math.random() * noOfDoodles)+1;
+doodleHolder.style.backgroundImage = "url(/doodles/doodle"+randomDoodle+".jpg)";
+
